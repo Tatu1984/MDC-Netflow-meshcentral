@@ -1,0 +1,27 @@
+{
+  "name": "IntegrationTest-VMBridge",
+  "virtualNetworks": [
+    {
+      "name": "ITNetwork",
+      "gateway": {
+        "virtualNetworkGatewayWANNetworkType": "Egress"
+      }
+    },
+    {
+      "name": "OTNetwork"
+    }
+  ],
+  "virtualMachines": [
+    {
+      "templateName": "UbuntuServer-Live",
+      "NetworkAdapters": [
+        {
+          "refVirtualNetworkName": "ITNetwork"
+        },
+        {
+          "refVirtualNetworkName": "OTNetwork"
+        }
+      ]
+    }
+  ]
+}

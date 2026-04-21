@@ -1,0 +1,22 @@
+$kind: collection
+name: MDC API
+description: MicroDataCenter Web API - OData-based REST API for managing sites,
+  workspaces, organizations, users, and device configurations.
+variables:
+  baseUrl: https://localhost:5001
+  bearerToken: ""
+  organizationId: 00000000-0000-0000-0000-000000000000
+  siteId: 00000000-0000-0000-0000-000000000000
+  registrationId: 00000000-0000-0000-0000-000000000000
+  workspaceId: 00000000-0000-0000-0000-000000000000
+  userId: 00000000-0000-0000-0000-000000000000
+  deviceConfigId: 00000000-0000-0000-0000-000000000000
+  remoteNetworkId: 00000000-0000-0000-0000-000000000000
+  vmid: 00000000-0000-0000-0000-000000000000
+  uuid: 00000000-0000-0000-0000-000000000000
+  apiKey: "test-admin-key-12345"
+auth:
+  type: apikey
+  credentials:
+    key: X-API-KEY
+    value: test-admin-key-12345

@@ -1,0 +1,22 @@
+$kind: http-request
+name: Create Organization
+method: POST
+url: '{{baseUrl}}/odata/Organizations'
+order: 3000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "My Organization",
+      "description": "Organization description",
+      "organizationUserRoles": [
+        {
+          "role": "WorkspaceManager",
+          "userId": "00000000-0000-0000-0000-000000000000"
+        }
+      ],
+      "siteIds": ["00000000-0000-0000-0000-000000000000"]
+    }

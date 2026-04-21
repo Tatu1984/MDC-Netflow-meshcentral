@@ -1,0 +1,14 @@
+$kind: http-request
+name: Approve Site Node Registration
+method: PUT
+url: '{{baseUrl}}/odata/SiteNodeRegistrations({{registrationId}})'
+order: 2000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "dataEgressOnMgmtNetwork": false
+    }

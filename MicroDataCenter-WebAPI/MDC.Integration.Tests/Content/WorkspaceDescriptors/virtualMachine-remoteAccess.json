@@ -1,0 +1,14 @@
+{
+  "name": "IntegrationTest-VM-RemoteAccess",
+  "virtualNetworks": [
+    { "enableRemoteNetwork": true }
+  ],
+  "virtualMachines": [
+    {
+      "templateName": "UbuntuServer-Live",
+      "networkAdapters": [
+        { "enableRemoteNetwork": true }
+      ]
+    }
+  ]
+}

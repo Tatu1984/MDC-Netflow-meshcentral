@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get Site
+method: GET
+url: "{{baseUrl}}/odata/Sites({{siteId}})?expand=*"
+queryParams:
+  expand: "*"
+order: 2000

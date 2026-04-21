@@ -1,0 +1,11 @@
+
+{
+  "virtualMachines": [
+    {
+      "name": "sut",
+      "networkAdapters": [
+        { "enableRemoteNetwork": true }
+      ]
+    }
+  ]
+}

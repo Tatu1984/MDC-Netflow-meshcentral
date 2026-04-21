@@ -1,0 +1,35 @@
+{
+  "$schema": { "version": "1.0" },
+  "product": {
+    "fullname": "Proxmox VE",
+    "product": "pve",
+    "enable_btrfs": true
+  },
+  "iso": {
+    "release": "9.1",
+    "isorelease": "1"
+  },
+  "dmi": {
+    "system": {
+      "uuid": "b787896e-57a6-4cb1-896c-4d525ad2827f",
+      "serial": "12345",
+      "name": "Standard PC (i440FX \u002B PIIX, 1996)",
+      "sku": ""
+    },
+    "baseboard": {},
+    "chassis": {
+      "asset_tag": "",
+      "serial": ""
+    }
+  },
+  "network_interfaces": [
+    {
+      "link": "ens18",
+      "mac": "bc:24:11:eb:11:7c"
+    },
+    {
+      "link": "ens19",
+      "mac": "bc:24:11:f4:85:0f"
+    }
+  ]
+}

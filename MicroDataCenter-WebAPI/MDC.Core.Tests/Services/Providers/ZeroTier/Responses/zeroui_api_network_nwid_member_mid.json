@@ -1,0 +1,39 @@
+{
+  "id": "a972acb27b930a04-a25ef3f5a5",
+  "clock": 1763533035395,
+  "networkId": "a972acb27b930a04",
+  "nodeId": "a25ef3f5a5",
+  "controllerId": "a972acb27b",
+  "lastOnline": 1763533033831,
+  "name": "JKYLE LAPTOP",
+  "description": "te",
+  "latency": 47,
+  "online": 1,
+  "clientVersion": "1.14.2",
+  "physicalAddress": "73.7.243.160",
+  "physicalPort": "49387",
+  "config": {
+    "activeBridge": false,
+    "address": "a25ef3f5a5",
+    "authenticationExpiryTime": 0,
+    "authorized": true,
+    "capabilities": [],
+    "creationTime": 1763434179324,
+    "id": "a25ef3f5a5",
+    "identity": "a25ef3f5a5:0:950259a8d6ebcc929501fe04e4a484b1e5405125aaf7937e24a7bcc2c866fc48b005ff5bd3251fd13a6cc30600ff8fabb2c823cf10c4a354b89c0101e86e9d02",
+    "ipAssignments": [
+      "10.254.254.215"
+    ],
+    "lastAuthorizedTime": 1763434195064,
+    "lastDeauthorizedTime": 0,
+    "noAutoAssignIps": false,
+    "nwid": "a972acb27b930a04",
+    "revision": 3,
+    "ssoExempt": false,
+    "tags": [],
+    "vMajor": 1,
+    "vMinor": 14,
+    "vProto": 12,
+    "vRev": 2
+  }
+}

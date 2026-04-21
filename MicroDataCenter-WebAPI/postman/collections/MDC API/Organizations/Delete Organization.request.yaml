@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Organization
+method: DELETE
+url: '{{baseUrl}}/odata/Organizations({{organizationId}})'
+order: 5000

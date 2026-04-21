@@ -1,0 +1,13 @@
+$kind: http-request
+name: Update Organization
+method: PATCH
+url: "{{baseUrl}}/odata/Organizations({{organizationId}})"
+order: 4000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: >-
+    {
+      "addSiteIds": [ "019d3559-db96-7270-a4dd-a6de85d10748", "019d3c7b-227d-70e4-af22-56efa01e6e0e", "019d3d2f-491d-76fb-a0b1-a900ade15f68" ]
+    }

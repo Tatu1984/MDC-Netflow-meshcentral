@@ -1,0 +1,14 @@
+$kind: http-request
+name: Download Template
+method: POST
+url: '{{baseUrl}}/odata/Sites({{siteId}})/DownloadTemplate'
+order: 6000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "digest": "sha256:abc123..."
+    }

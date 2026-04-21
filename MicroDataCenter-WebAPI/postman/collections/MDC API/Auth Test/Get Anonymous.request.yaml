@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get Anonymous
+method: GET
+url: '{{baseUrl}}/api/AuthTest/anonymous'
+order: 1000
+auth:
+  type: noauth

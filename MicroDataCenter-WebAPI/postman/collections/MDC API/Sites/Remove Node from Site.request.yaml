@@ -1,0 +1,14 @@
+$kind: http-request
+name: Remove Node from Site
+method: POST
+url: '{{baseUrl}}/odata/Sites({{siteId}})/RemoveNode'
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "siteNodeId": "00000000-0000-0000-0000-000000000000"
+    }

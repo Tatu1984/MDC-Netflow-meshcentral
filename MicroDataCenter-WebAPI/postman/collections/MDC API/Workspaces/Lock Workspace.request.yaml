@@ -1,0 +1,8 @@
+$kind: http-request
+name: Lock Workspace
+url: "{{baseUrl}}/odata/Workspaces({{workspaceId}})/Lock"
+method: POST
+body:
+  type: json
+  content: "{\r\n    \"locked\": true\r\n}"
+order: 4186

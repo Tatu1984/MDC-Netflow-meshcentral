@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Downloadable Templates
+method: GET
+url: '{{baseUrl}}/odata/Sites({{siteId}})/DownloadableTemplates'
+order: 5000

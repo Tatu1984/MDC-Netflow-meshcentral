@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 9280dfaf-7e2e-45fd-bc61-25f69a967737
+
+localResources:
+  specs:
+    - ..\MDC.Api\obj\Debug\net10.0\EndpointInfo\MDC.Api.json

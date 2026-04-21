@@ -1,0 +1,26 @@
+{
+  "allowDNS": false,
+  "allowDefault": false,
+  "allowGlobal": false,
+  "allowManaged": true,
+  "assignedAddresses": [],
+  "bridge": false,
+  "broadcastEnabled": false,
+  "dhcp": false,
+  "dns": {
+    "domain": "",
+    "servers": []
+  },
+  "id": "868d2ef0214a2ced",
+  "mac": "ee:c7:62:98:e4:b5",
+  "mtu": 2800,
+  "multicastSubscriptions": [],
+  "name": "",
+  "netconfRevision": 0,
+  "nwid": "868d2ef0214a2ced",
+  "portDeviceName": "zto2wgjxgm",
+  "portError": 0,
+  "routes": [],
+  "status": "REQUESTING_CONFIGURATION",
+  "type": "PRIVATE"
+}

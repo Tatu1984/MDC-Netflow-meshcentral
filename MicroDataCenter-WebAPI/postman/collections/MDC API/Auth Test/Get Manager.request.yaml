@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Manager
+method: GET
+url: '{{baseUrl}}/api/AuthTest/manager'
+order: 5000

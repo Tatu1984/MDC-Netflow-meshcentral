@@ -1,0 +1,21 @@
+$kind: http-request
+name: Get All Sites
+method: GET
+url: "{{baseUrl}}/odata/Sites?count=true"
+queryParams:
+  - key: count
+    value: "true"
+  - key: expand
+    value: organizations
+    disabled: true
+  - key: expand
+    value: workspaces
+    disabled: true
+  - key: expand
+    value: "*"
+    disabled: true
+auth:
+  type: inherit
+  credentials:
+    id: collection-eCdf90f4CdB57a92E497D82D-apikey
+order: 1000

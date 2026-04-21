@@ -1,0 +1,40 @@
+{
+  "name": "FirewallLab",
+  "virtualNetworks": [
+    {
+      "name": "vnetWAN",
+      "gateway": {
+        "templateName": "Alpine",
+        "WANNetworkType": "Egress"
+      }
+    },
+    {
+      "name": "vnetLAN",
+      "gateway": {
+        "templateName": "opnSense",
+        "WANNetworkType": "Internal",
+        "RefInternalWANVirtualNetworkName": "vnetWAN"
+      }
+    }
+  ],
+  "virtualMachines": [
+    {
+      "name": "WebServer",
+      "templateName": "UbuntuServer-Live",
+      "networkAdapters": [
+        {
+          "refVirtualNetworkName": "vnetWAN"
+        }
+      ]
+    },
+    {
+      "name": "Desktop-Client",
+      "templateName": "UbuntuDesktop",
+      "networkAdapters": [
+        {
+          "refVirtualNetworkName": "vnetLAN"
+        }
+      ]
+    }
+  ]
+}

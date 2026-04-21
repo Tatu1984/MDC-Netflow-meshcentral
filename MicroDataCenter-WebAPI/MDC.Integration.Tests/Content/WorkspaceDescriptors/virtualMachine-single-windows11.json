@@ -1,0 +1,10 @@
+{
+  "name": "IntegrationTest-VM",
+  "virtualMachines": [
+    {
+      "templateName": "Windows11",
+      "CPUCores": 4,
+      "MemoryMB": 8192
+    }
+  ]
+}

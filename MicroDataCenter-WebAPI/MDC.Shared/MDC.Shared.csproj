@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Datacenter.cs" />
+    <Compile Remove="Models\DatacenterNode.cs" />
+    <Compile Remove="Models\DatacenterNodeCPUInfo.cs" />
+    <Compile Remove="Models\Device.cs" />
+    <Compile Remove="Models\DeviceConfiguration.cs" />
+    <Compile Remove="Models\DeviceConfigurationNetworkInterface.cs" />
+    <Compile Remove="Models\DeviceConfigurationSwitchMap.cs" />
+    <Compile Remove="Models\DeviceNetworkInterface.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\Datacenter.cs" />
+    <None Include="Models\DatacenterNode.cs" />
+    <None Include="Models\DatacenterNodeCPUInfo.cs" />
+    <None Include="Models\Device.cs" />
+    <None Include="Models\DeviceConfiguration.cs" />
+    <None Include="Models\DeviceConfigurationNetworkInterface.cs" />
+    <None Include="Models\DeviceConfigurationSwitchMap.cs" />
+    <None Include="Models\DeviceNetworkInterface.cs" />
+  </ItemGroup>
+
+</Project>

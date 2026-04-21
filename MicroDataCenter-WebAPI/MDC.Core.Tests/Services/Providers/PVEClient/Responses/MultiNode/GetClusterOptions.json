@@ -1,0 +1,20 @@
+{
+  "data": {
+    "allowed-tags": [
+      "gw_lan_networkinterface.net0",
+      "os_type.opnsense",
+      "os_type.proxmox",
+      "os_type.ubuntu",
+      "os_variantion.server",
+      "os_variation.desktop",
+      "os_variation.server",
+      "template_vmid.99101",
+      "template_vmid.99104",
+      "template_vmid.99106"
+    ],
+    "description": "Some Notes\n",
+    "mac_prefix": "BC:24:11",
+    "keyboard": "en-us"
+  },
+  "success": 1
+}

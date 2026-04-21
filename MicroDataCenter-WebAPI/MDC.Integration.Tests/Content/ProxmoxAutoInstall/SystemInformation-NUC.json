@@ -1,0 +1,41 @@
+{
+  "$schema": {
+    "version": "1.0"
+  },
+  "product": {
+    "fullname": "Proxmox VE",
+    "product": "pve",
+    "enable_btrfs": true
+  },
+  "iso": {
+    "release": "9.1",
+    "isorelease": "1"
+  },
+  "dmi": {
+    "system": {
+      "uuid": "98af4fb7-73f6-ab59-a2c4-1c697a607b26",
+      "name": "NUC10i7FNH",
+      "serial": "GEFN002007YK",
+      "sku": "BXNUC10i7FNH"
+    },
+    "baseboard": {
+      "asset_tag": "Default string",
+      "name": "NUC10i7FNB",
+      "serial": "GEFN002007YK"
+    },
+    "chassis": {
+      "serial": "Default string",
+      "asset_tag": "Default string"
+    }
+  },
+  "network_interfaces": [
+    {
+      "link": "eno1",
+      "mac": "1c:69:7a:60:7b:26"
+    },
+    {
+      "link": "wlp0s20f3",
+      "mac": "98:af:65:ce:17:97"
+    }
+  ]
+}

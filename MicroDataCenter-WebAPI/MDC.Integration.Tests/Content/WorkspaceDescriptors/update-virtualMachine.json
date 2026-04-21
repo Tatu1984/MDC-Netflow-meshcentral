@@ -1,0 +1,11 @@
+{
+  "virtualMachines": [
+    {
+      "name": "sut",
+      "templateName": "UbuntuServer-Live",
+      "cpuCores": 2,
+      "memoryMB": "2048",
+      "operation": "add"
+    }
+  ]
+}

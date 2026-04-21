@@ -1,0 +1,24 @@
+$kind: http-request
+name: Create Site
+method: POST
+url: '{{baseUrl}}/odata/Sites'
+order: 3000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "memberAddress": "10.0.0.1",
+      "serialNumber": "SN-12345",
+      "registrationUserName": "root",
+      "registrationPassword": "password",
+      "description": "My site",
+      "validateServerCertificate": false,
+      "port": 8006,
+      "timeout": 30,
+      "organizationIds": [],
+      "importToOrganizationId": null,
+      "dataEgressOnMgmtNetwork": false
+    }

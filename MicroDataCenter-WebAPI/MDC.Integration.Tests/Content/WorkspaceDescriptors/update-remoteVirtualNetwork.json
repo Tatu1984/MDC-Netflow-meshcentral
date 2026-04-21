@@ -1,0 +1,8 @@
+{
+  "virtualNetworks": [
+    {
+      "name": "vnet0",
+      "enableRemoteNetwork": true
+    }
+  ]
+}

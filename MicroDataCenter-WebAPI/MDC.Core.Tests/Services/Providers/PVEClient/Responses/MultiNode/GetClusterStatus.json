@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": "cluster",
+      "name": "SRG0001",
+      "nodes": 4,
+      "quorate": 1,
+      "type": "cluster",
+      "version": 4
+    },
+    {
+      "id": "node/node03",
+      "ip": "192.168.75.13",
+      "level": "",
+      "local": 0,
+      "name": "node03",
+      "nodeid": 3,
+      "online": 1,
+      "type": "node"
+    },
+    {
+      "id": "node/node02",
+      "ip": "192.168.75.12",
+      "level": "",
+      "local": 0,
+      "name": "node02",
+      "nodeid": 2,
+      "online": 1,
+      "type": "node"
+    },
+    {
+      "id": "node/node04",
+      "ip": "192.168.75.14",
+      "level": "",
+      "local": 0,
+      "name": "node04",
+      "nodeid": 4,
+      "online": 1,
+      "type": "node"
+    },
+    {
+      "id": "node/node01",
+      "ip": "192.168.75.11",
+      "level": "",
+      "local": 1,
+      "name": "node01",
+      "nodeid": 1,
+      "online": 1,
+      "type": "node"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+name: Dev
+values:
+  - key: baseUrl
+    value: ''
+    enabled: true
+  - key: apiKey
+    value: ''
+    enabled: true
+color: 0

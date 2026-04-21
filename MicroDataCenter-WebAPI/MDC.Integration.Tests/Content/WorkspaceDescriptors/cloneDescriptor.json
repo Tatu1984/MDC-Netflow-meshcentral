@@ -1,0 +1,27 @@
+{
+  "name": "IntegrationTest-CloneDescriptor",
+  "description": null,
+  "virtualNetworks": [
+    {
+      "name": "vnet-1",
+      "enableRemoteNetwork": true
+    }
+  ],
+  "virtualMachines": [
+    {
+      "name": "m1",
+      "templateName": "UbuntuDesktop",
+      "templateRevision": 0,
+      "cpuCores": 8,
+      "memoryMB": "8192",
+      "networkAdapters": [
+        {
+          "refVirtualNetworkName": "vnet-1",
+          "isFirewallEnabled": true,
+          "enableRemoteNetwork": true
+        }
+      ]
+    }
+  ]
+}
+ 

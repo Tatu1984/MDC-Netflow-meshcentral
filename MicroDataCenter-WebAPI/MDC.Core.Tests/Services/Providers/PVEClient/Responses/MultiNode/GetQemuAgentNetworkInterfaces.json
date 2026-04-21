@@ -1,0 +1,71 @@
+{
+  "data": {
+    "result": [
+      {
+        "name": "vtnet0",
+        "ip-addresses": [
+          {
+            "ip-address-type": "ipv4",
+            "prefix": 24,
+            "ip-address": "192.168.1.1"
+          },
+          {
+            "prefix": 64,
+            "ip-address": "fe80::be24:11ff:fe42:9d2f",
+            "ip-address-type": "ipv6"
+          }
+        ],
+        "hardware-address": "bc:24:11:42:9d:2f"
+      },
+      {
+        "ip-addresses": [
+          {
+            "ip-address-type": "ipv4",
+            "prefix": 24,
+            "ip-address": "192.168.254.223"
+          },
+          {
+            "ip-address-type": "ipv6",
+            "prefix": 64,
+            "ip-address": "fe80::be24:11ff:fe09:1217"
+          }
+        ],
+        "hardware-address": "bc:24:11:09:12:17",
+        "name": "vtnet1"
+      },
+      {
+        "name": "lo0",
+        "hardware-address": "00:00:00:00:00:00",
+        "ip-addresses": [
+          {
+            "ip-address": "::1",
+            "prefix": 128,
+            "ip-address-type": "ipv6"
+          },
+          {
+            "ip-address-type": "ipv6",
+            "ip-address": "fe80::1",
+            "prefix": 64
+          },
+          {
+            "ip-address": "127.0.0.1",
+            "prefix": 8,
+            "ip-address-type": "ipv4"
+          }
+        ]
+      },
+      {
+        "name": "enc0",
+        "hardware-address": "00:00:00:00:00:00"
+      },
+      {
+        "hardware-address": "00:00:00:00:00:00",
+        "name": "pflog0"
+      },
+      {
+        "hardware-address": "00:00:00:00:00:00",
+        "name": "pfsync0"
+      }
+    ]
+  }
+}

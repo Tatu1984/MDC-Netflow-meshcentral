@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Workspace Descriptor
+url: "{{baseUrl}}/odata/Workspaces({{workspaceId}})/Descriptor"
+method: GET
+order: 2000

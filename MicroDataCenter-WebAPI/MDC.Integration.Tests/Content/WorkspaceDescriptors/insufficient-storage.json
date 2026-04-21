@@ -1,0 +1,32 @@
+{
+  "siteId": "019d5670-918d-78fb-940f-34749785b71e",
+  "organizationId": "019d5daa-1904-76bd-b144-0a69727def08",
+  "descriptor": {
+    "name": "m1",
+    "description": "xyz",
+    "virtualNetworks": [
+      {
+        "name": "vnet-1",
+        "enableRemoteNetwork": true
+      }
+    ],
+    "virtualMachines": [
+      {
+        "name": "m1",
+        "templateName": "UbuntuDesktop",
+        "templateRevision": 0,
+        "cpuCores": 8,
+        "memoryMB": "8192",
+        "networkAdapters": [
+          {
+            "refVirtualNetworkName": "vnet-1",
+            "isFirewallEnabled": true,
+            "enableRemoteNetwork": true
+          }
+        ]
+      }
+    ]
+  }
+}
+ 
+ 

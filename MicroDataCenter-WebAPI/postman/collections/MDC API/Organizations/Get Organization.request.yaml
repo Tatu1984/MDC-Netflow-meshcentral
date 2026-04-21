@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Organization
+method: GET
+url: '{{baseUrl}}/odata/Organizations({{organizationId}})'
+order: 2000

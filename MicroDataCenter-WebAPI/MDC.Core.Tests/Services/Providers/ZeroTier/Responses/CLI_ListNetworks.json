@@ -1,0 +1,54 @@
+[
+  {
+    "allowDNS": false,
+    "allowDefault": false,
+    "allowGlobal": false,
+    "allowManaged": true,
+    "assignedAddresses": [
+      "172.22.1.11/16"
+    ],
+    "bridge": false,
+    "broadcastEnabled": true,
+    "dhcp": false,
+    "dns": {
+      "domain": "",
+      "servers": []
+    },
+    "id": "868d2ef021c1c256",
+    "mac": "56:8b:81:19:9d:c9",
+    "mtu": 2800,
+    "multicastSubscriptions": [
+      {
+        "adi": 0,
+        "mac": "01:00:5e:00:00:01"
+      },
+      {
+        "adi": 0,
+        "mac": "33:33:00:00:00:01"
+      },
+      {
+        "adi": 0,
+        "mac": "33:33:ff:19:9d:c9"
+      },
+      {
+        "adi": 2887123211,
+        "mac": "ff:ff:ff:ff:ff:ff"
+      }
+    ],
+    "name": "SRG0001",
+    "netconfRevision": 3,
+    "nwid": "868d2ef021c1c256",
+    "portDeviceName": "zto2wo6mtx",
+    "portError": 0,
+    "routes": [
+      {
+        "flags": 0,
+        "metric": 0,
+        "target": "172.22.0.0/16",
+        "via": null
+      }
+    ],
+    "status": "OK",
+    "type": "PRIVATE"
+  }
+]

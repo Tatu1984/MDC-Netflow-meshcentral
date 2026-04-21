@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Admin
+method: GET
+url: '{{baseUrl}}/api/AuthTest/admin'
+order: 3000

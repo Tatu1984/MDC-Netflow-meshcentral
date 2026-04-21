@@ -1,0 +1,6 @@
+{
+  "name": "IntegrationTest-VM",
+  "virtualMachines": [
+    { "templateName": "UbuntuServer-Live" }
+  ]
+}

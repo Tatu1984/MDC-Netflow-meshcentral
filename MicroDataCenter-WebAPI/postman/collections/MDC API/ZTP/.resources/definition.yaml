@@ -1,0 +1,11 @@
+$kind: collection
+name: ZTP
+auth:
+  type: apikey
+  credentials:
+    - key: key
+      value: X-Api-Key
+    - key: value
+      value: '{{apiKey}}'
+    - key: in
+      value: header

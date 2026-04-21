@@ -1,0 +1,91 @@
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- develop
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  #dockerRegistryServiceConnection: '49f88764-ca52-40e6-8629-97014eb8b63e'
+  dockerRegistryServiceConnection: '281d9409-4966-481f-909f-4caa6b340ae3'
+  azureSubscriptionServiceConnection: 'tensparrows-edge-latest-service-connection'
+  imageRepository: 'mdc-admin-dashboard'
+  containerRegistry: 'microdatacenterdevelopment.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  containerAppName: 'admin-edge-latest'
+  resourceGroup: 'rg-edge-latest-core'
+
+  # version pattern: Major.Minor.BuildId
+  major: '1'
+  minor: '0'
+  version: '$(major).$(minor).$(Build.BuildId)'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(major).$(minor).$(Build.BuildId)__$(Date:yyyyMMdd)
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - script: echo '$(Build.BuildNumber)'
+    # Build the Docker image
+    # NEXT_PUBLIC_* vars are read from .env.production at build time (no build-args needed)
+    - script: |
+        docker build \
+          -t $(containerRegistry)/$(imageRepository):$(version) \
+          -t $(containerRegistry)/$(imageRepository):latest \
+          -f $(dockerfilePath) \
+          $(Build.SourcesDirectory)
+      displayName: Build Docker image
+
+    # Login to ACR
+    - task: Docker@2
+      displayName: Login to ACR
+      inputs:
+        command: login
+        containerRegistry: $(dockerRegistryServiceConnection)
+
+    # Push the Docker image
+    - script: |
+        docker push $(containerRegistry)/$(imageRepository):$(version)
+        docker push $(containerRegistry)/$(imageRepository):latest
+      displayName: Push Docker image
+- stage: Deploy
+  displayName: Deploy to Container Apps
+  dependsOn: Build
+  jobs:
+  - job: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    # Update only BUILD_TAG env var without touching others
+    - task: AzureCLI@2
+      displayName: Set BUILD_TAG on Container App
+      inputs:
+        azureSubscription: $(azureSubscriptionServiceConnection)
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          az containerapp update \
+            --name $(containerAppName) \
+            --resource-group $(resourceGroup) \
+            --set-env-vars BUILD_TAG=$(Build.BuildId)
+
+    - task: AzureContainerApps@1
+      displayName: Deploy Container App
+      inputs:
+        azureSubscription: $(azureSubscriptionServiceConnection)
+        containerAppName: $(containerAppName)
+        resourceGroup: $(resourceGroup)
+        imageToDeploy: $(containerRegistry)/$(imageRepository):$(version)

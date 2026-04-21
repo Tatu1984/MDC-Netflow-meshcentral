@@ -1,0 +1,152 @@
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- develop
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: '178fbafd-2443-45c9-8105-e9e4c74085b8'
+  azureSubscriptionServiceConnection: 'tensparrows-edge-latest-service-connection'
+  imageRepository: 'microdatacenter-webapi'
+  containerRegistry: 'microdatacenterdevelopment.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  containerAppName: 'api-edge-latest'
+  resourceGroup: 'rg-edge-latest-core'
+
+  # version pattern: Major.Minor.BuildId
+  major: '1'
+  minor: '0'
+  version: '$(major).$(minor).$(Build.BuildId)'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(major).$(minor).$(Build.BuildId)__$(Date:yyyyMMdd)
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - script: echo '$(Build.BuildNumber)'
+
+    - task: UseDotNet@2
+      inputs:
+        packageType: sdk
+        version: 10.x
+
+    # Restore
+    - task: DotNetCoreCLI@2
+      displayName: Restore
+      inputs:
+        command: restore
+        projects: '**/*.sln'
+
+    - script: dotnet build --configuration Release --no-restore
+      displayName: Build
+
+    # Run tests with coverage
+    #- script: |
+    #    dotnet test \
+    #      --configuration Release \
+    #      --no-build \
+    #      --collect:"XPlat Code Coverage" \
+    #      --results-directory $(Agent.TempDirectory)/testresults \
+    #      --logger "trx" \
+    #      --filter "FullyQualifiedName!~Integration.Tests"
+    #  displayName: Run Unit Tests
+
+    # Run Tests with Coverage
+    - task: DotNetCoreCLI@2
+      displayName: Run Unit Tests
+      inputs:
+        command: test
+        projects: |
+          **/*Tests/*.csproj
+          !**/*Integration.Tests.csproj
+        arguments: --configuration Release --no-build --collect:"XPlat Code Coverage"
+        publishTestResults: true 
+
+    # Run Tests with Coverage
+    #- script: |
+    #    dotnet test \
+    #      --configuration $(buildConfiguration) \
+    #      --no-build \
+    #      --collect:"XPlat Code Coverage" \
+    #      --results-directory $(Agent.TempDirectory)/testresults \
+    #      --logger "trx" \
+    #      --filter "FullyQualifiedName!~Integration.Tests"
+    #  displayName: Run Unit Tests
+        
+    # Install reportgenerator
+    - script: |
+        dotnet tool install --global dotnet-reportgenerator-globaltool
+        echo "##vso[task.prependpath]$HOME/.dotnet/tools"
+      displayName: Install ReportGenerator
+
+    # Convert coverage to Cobertura
+    - task: PublishTestResults@2
+      displayName: Publish Test Results
+      inputs:
+        testResultsFormat: VSTest
+        testResultsFiles: '$(Agent.TempDirectory)/**/*.trx'
+        failTaskOnFailedTests: true
+
+    # Publish code coverage
+    - task: PublishCodeCoverageResults@2
+      displayName: Publish Code Coverage
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+        reportDirectory: '$(Agent.TempDirectory)'
+
+    - task: Docker@2
+      displayName: Build Docker Image
+      inputs:
+        command: build
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePath)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        arguments: |
+          --build-arg APP_VERSION=$(version)
+          --build-arg BUILD_DATE=$(Date:yyyyMMdd)
+        tags: |
+          $(version)
+          latest
+    - task: Docker@2
+      displayName: Push Docker Image
+      inputs:
+        command: push
+        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: $(imageRepository)
+        tags: |
+          $(version)
+          latest
+- stage: Deploy
+  displayName: Deploy to Container Apps
+  dependsOn: Build
+  jobs:
+  - job: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: AzureContainerApps@1
+      displayName: Deploy Container App
+      inputs:
+        azureSubscription: $(azureSubscriptionServiceConnection)
+        containerAppName: $(containerAppName)
+        resourceGroup: $(resourceGroup)
+
+        imageToDeploy: |
+          $(containerRegistry)/$(imageRepository):$(version)
+
+      

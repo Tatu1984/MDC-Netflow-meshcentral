@@ -1,0 +1,37 @@
+# Local env / secrets
+.env.local
+.env.local.*
+.env.*.local
+**/.env.local
+**/.env.local.*
+**/.env.*.local
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# .NET
+bin/
+obj/
+*.pdb
+*.nupkg
+
+# Playwright
+test-results/
+playwright-report/
+tests/.auth/
+playwright/.cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+/tmp/

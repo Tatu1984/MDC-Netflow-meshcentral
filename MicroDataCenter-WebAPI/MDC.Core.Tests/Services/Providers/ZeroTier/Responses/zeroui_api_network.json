@@ -1,0 +1,67 @@
+[
+  {
+    "id": "a972acb27b930a04",
+    "clock": 1763532623068,
+    "description": "Network for MDC Proxmox Administration Proxy",
+    "rulesSource": "\n# This is a default rule set that allows IPv4 and IPv6 traffic but otherwise\n# behaves like a standard Ethernet switch.\n\n#\n# Allow only IPv4, IPv4 ARP, and IPv6 Ethernet frames.\n#\ndrop\n  not ethertype ipv4\n  and not ethertype arp\n  and not ethertype ipv6\n;\n\n#\n# Uncomment to drop non-ZeroTier issued and managed IP addresses.\n#\n# This prevents IP spoofing but also blocks manual IP management at the OS level and\n# bridging unless special rules to exempt certain hosts or traffic are added before\n# this rule.\n#\n#drop\n#  not chr ipauth\n#;\n\n# Accept anything else. This is required since default is 'drop'.\naccept;\n",
+    "tagsByName": {},
+    "capabilitiesByName": {},
+    "config": {
+      "authTokens": [ null ],
+      "authorizationEndpoint": "",
+      "capabilities": [],
+      "clientId": "",
+      "creationTime": 1763433006956,
+      "dns": [],
+      "enableBroadcast": true,
+      "id": "a972acb27b930a04",
+      "ipAssignmentPools": [
+        {
+          "ipRangeEnd": "10.254.254.254",
+          "ipRangeStart": "10.254.254.2"
+        }
+      ],
+      "mtu": 2800,
+      "multicastLimit": 32,
+      "name": "(new) MDC Administration",
+      "nwid": "a972acb27b930a04",
+      "private": true,
+      "routes": [
+        {
+          "target": "10.254.0.0/16",
+          "via": null
+        }
+      ],
+      "rules": [
+        {
+          "etherType": 2048,
+          "not": true,
+          "or": false,
+          "type": "MATCH_ETHERTYPE"
+        },
+        {
+          "etherType": 2054,
+          "not": true,
+          "or": false,
+          "type": "MATCH_ETHERTYPE"
+        },
+        {
+          "etherType": 34525,
+          "not": true,
+          "or": false,
+          "type": "MATCH_ETHERTYPE"
+        },
+        { "type": "ACTION_DROP" },
+        { "type": "ACTION_ACCEPT" }
+      ],
+      "ssoEnabled": false,
+      "tags": [],
+      "v4AssignMode": { "zt": true },
+      "v6AssignMode": {
+        "6plane": false,
+        "rfc4193": false,
+        "zt": false
+      }
+    }
+  }
+]

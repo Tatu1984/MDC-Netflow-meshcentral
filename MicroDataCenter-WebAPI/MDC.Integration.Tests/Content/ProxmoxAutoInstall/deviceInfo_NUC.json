@@ -1,0 +1,153 @@
+{
+  "$schema": { "version": "1.2" },
+  "debian-version": "13.2",
+  "product": {
+    "fullname": "Proxmox VE",
+    "short": "pve",
+    "version": "9.1.1"
+  },
+  "iso": {
+    "release": "9.1",
+    "isorelease": "1"
+  },
+  "kernel-version": {
+    "sysname": "Linux",
+    "release": "6.17.2-1-pve",
+    "version": "#1 SMP PREEMPT_DYNAMIC PMX 6.17.2-1 (2025-10-21T11:55Z)",
+    "machine": "x86_64"
+  },
+  "boot-info": { "mode": "efi" },
+  "cpu-info": {
+    "cores": 6,
+    "cpus": 12,
+    "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust sgx bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp vnmi md_clear flush_l1d arch_capabilities",
+    "hvm": true,
+    "model": "Intel(R) Core(TM) i7-10710U CPU @ 1.10GHz",
+    "sockets": 1
+  },
+  "dmi": {
+    "system": {
+      "sku": "BXNUC10i7FNH",
+      "uuid": "98af4fb7-73f6-ab59-a2c4-1c697a607b26",
+      "name": "NUC10i7FNH",
+      "serial": "GEFN002007YK"
+    },
+    "baseboard": {
+      "serial": "GEFN002007YK",
+      "name": "NUC10i7FNB",
+      "asset_tag": "Default string"
+    },
+    "chassis": {
+      "asset_tag": "Default string",
+      "serial": "Default string"
+    }
+  },
+  "filesystem": "ext4",
+  "fqdn": "98af4fb7-73f6-ab59-a2c4-1c697a607b26.technest",
+  "machine-id": "497adebf940f48dd8c27b78f8cd0a120",
+  "disks": [
+    {
+      "size": 500107862016,
+      "is-bootdisk": true,
+      "udev-properties": {
+        "CURRENT_TAGS": ":systemd:",
+        "DEVLINKS": "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_500GB_S58SNMFN500358T_1 /dev/disk/by-diskseq/9 /dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_500GB_S58SNMFN500358T /dev/disk/by-path/pci-0000:3a:00.0-nvme-1 /dev/disk/by-id/nvme-eui.00253855019d0924",
+        "DEVNAME": "/dev/nvme0n1",
+        "DEVPATH": "/devices/pci0000:00/0000:00:1d.0/0000:3a:00.0/nvme/nvme0/nvme0n1",
+        "DEVTYPE": "disk",
+        "DISKSEQ": "9",
+        "ID_MODEL": "Samsung SSD 970 EVO Plus 500GB",
+        "ID_NSID": "1",
+        "ID_PART_TABLE_TYPE": "gpt",
+        "ID_PART_TABLE_UUID": "19046d63-18e0-4d12-81cd-66c8cb5a7bde",
+        "ID_PATH": "pci-0000:3a:00.0-nvme-1",
+        "ID_PATH_TAG": "pci-0000_3a_00_0-nvme-1",
+        "ID_REVISION": "2B2QEXM7",
+        "ID_SERIAL": "Samsung_SSD_970_EVO_Plus_500GB_S58SNMFN500358T_1",
+        "ID_SERIAL_SHORT": "S58SNMFN500358T",
+        "ID_WWN": "eui.00253855019d0924",
+        "MAJOR": "259",
+        "MINOR": "0",
+        "SUBSYSTEM": "block",
+        "TAGS": ":systemd:",
+        "USEC_INITIALIZED": "7233075"
+      }
+    }
+  ],
+  "network-interfaces": [
+    {
+      "name": "nic0",
+      "mac": "1c:69:7a:60:7b:26",
+      "address": "10.10.72.31/24",
+      "is-management": true,
+      "is-pinned": true,
+      "udev-properties": {
+        "CURRENT_TAGS": ":systemd:",
+        "DEVPATH": "/devices/pci0000:00/0000:00:1f.6/net/eno1",
+        "ID_BUS": "pci",
+        "ID_MODEL_FROM_DATABASE": "Ethernet Connection (10) I219-V",
+        "ID_MODEL_ID": "0x0d4f",
+        "ID_NET_DRIVER": "e1000e",
+        "ID_NET_LABEL_ONBOARD": " LAN",
+        "ID_NET_LINK_FILE": "/usr/lib/systemd/network/99-default.link",
+        "ID_NET_NAME": "eno1",
+        "ID_NET_NAME_MAC": "enx1c697a607b26",
+        "ID_NET_NAME_ONBOARD": "eno1",
+        "ID_NET_NAME_PATH": "enp0s31f6",
+        "ID_NET_NAMING_SCHEME": "v257",
+        "ID_OUI_FROM_DATABASE": "EliteGroup Computer Systems Co., LTD",
+        "ID_PATH": "pci-0000:00:1f.6",
+        "ID_PATH_TAG": "pci-0000_00_1f_6",
+        "ID_PCI_CLASS_FROM_DATABASE": "Network controller",
+        "ID_PCI_SUBCLASS_FROM_DATABASE": "Ethernet controller",
+        "ID_VENDOR_FROM_DATABASE": "Intel Corporation",
+        "ID_VENDOR_ID": "0x8086",
+        "IFINDEX": "2",
+        "INTERFACE": "eno1",
+        "SUBSYSTEM": "net",
+        "SYSTEMD_ALIAS": "/sys/subsystem/net/devices/eno1",
+        "TAGS": ":systemd:",
+        "USEC_INITIALIZED": "8053282"
+      }
+    },
+    {
+      "name": "nic1",
+      "mac": "98:af:65:ce:17:97",
+      "is-pinned": true,
+      "udev-properties": {
+        "CURRENT_TAGS": ":systemd:",
+        "DEVPATH": "/devices/pci0000:00/0000:00:14.3/net/wlp0s20f3",
+        "DEVTYPE": "wlan",
+        "ID_AUTOSUSPEND": "1",
+        "ID_BUS": "pci",
+        "ID_MODEL_FROM_DATABASE": "Comet Lake PCH-LP CNVi WiFi (Dual Band Wi-Fi 6(802.11ax) AX201 160MHz 2x2 [Harrison Peak])",
+        "ID_MODEL_ID": "0x02f0",
+        "ID_NET_DRIVER": "iwlwifi",
+        "ID_NET_LINK_FILE": "/usr/lib/systemd/network/99-default.link",
+        "ID_NET_NAME": "wlp0s20f3",
+        "ID_NET_NAME_MAC": "wlx98af65ce1797",
+        "ID_NET_NAME_PATH": "wlp0s20f3",
+        "ID_NET_NAMING_SCHEME": "v257",
+        "ID_OUI_FROM_DATABASE": "Intel Corporate",
+        "ID_PATH": "pci-0000:00:14.3",
+        "ID_PATH_TAG": "pci-0000_00_14_3",
+        "ID_PCI_CLASS_FROM_DATABASE": "Network controller",
+        "ID_PCI_SUBCLASS_FROM_DATABASE": "Network controller",
+        "ID_VENDOR_FROM_DATABASE": "Intel Corporation",
+        "ID_VENDOR_ID": "0x8086",
+        "IFINDEX": "3",
+        "INTERFACE": "wlp0s20f3",
+        "SUBSYSTEM": "net",
+        "SYSTEMD_ALIAS": "/sys/subsystem/net/devices/wlp0s20f3",
+        "TAGS": ":systemd:",
+        "USEC_INITIALIZED": "9233395"
+      }
+    }
+  ],
+  "ssh-public-host-keys": {
+    "ecdsa": "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCTCv\u002B22fviZ1Nl74Qs4MAeYGFlImGyJUDh7l8q4yAKi3OGv7BtsurJjzJ\u002BKJYCobPMfwQeHiPw\u002BuSDUej7ipAI= root@98af4fb7-73f6-ab59-a2c4-1c697a607b26",
+    "ed25519": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOUtVUjEGDg8u4s3pLptkjho7FJtZhMfLZKBBzjIhy9h root@98af4fb7-73f6-ab59-a2c4-1c697a607b26",
+    "rsa": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDoijo4y6VUJwLExLrbyO1bW5pau2RZ4UqXxvu5rXhiv\u002BZYexkRVeZRZNE6nTjyeUVjRnFY1CEoK/jKR2wvmrnxSTkIBQYZ\u002BJugy/iwqqrTzfd8TrqjLuiEL\u002BgJjGpu8pdUopAtlQ3wvR\u002BhY00OU7Oi6CpnZBPu5/ld/9d\u002BmvwP/aB\u002BNMRrlvYYTVJ8txL/XBE8znHWNqc2Czjjo9FFmygR1j59266sLvWBixO1NfyKTUkMznqmHsHt8SfPhAnOB1ZrsE4mYVeY7Hz87qXJtmZFJ80bEnBYc4s3JNO7Bthlo4xyB7pT0yH2DJIN3ZjzaYgjF8Cl33InX6lCDMXFDtx0iUgdgwsDUqnmKwj6e52ny9g3bnVOY7e0C/tk7wJVZTT00l4pgY/SWyA/GtWIPvVa3ouRYSLdVkriTnaTK/SnINARMt4/ElnGppdgKrgDKPOhU1zviPBiVS1bnGa4pQIwnNrRzX49VWoj\u002B2iW3BXUnuVLLgOxoR0QALKhQ8IX7jk= root@98af4fb7-73f6-ab59-a2c4-1c697a607b26"
+  },
+  "reboot-mode": "reboot"
+}

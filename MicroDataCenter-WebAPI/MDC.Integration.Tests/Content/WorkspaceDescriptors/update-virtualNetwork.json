@@ -1,0 +1,12 @@
+{
+  "virtualNetworks": [
+    {
+      "name": "vnetLAN",
+      "gateway": {
+        "templateName": "Alpine",
+        "WANNetworkType": "Internal",
+        "RefInternalWANVirtualNetworkName": "vnet0"
+      }
+    }
+  ]
+}

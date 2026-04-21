@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Site Node Registration
+method: DELETE
+url: '{{baseUrl}}/odata/SiteNodeRegistrations({{registrationId}})'
+order: 3000

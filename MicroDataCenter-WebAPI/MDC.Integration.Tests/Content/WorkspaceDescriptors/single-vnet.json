@@ -1,0 +1,8 @@
+{
+  "name": "IntegrationTest-SingleVNET",
+  "virtualNetworks": [
+    {
+      "name": "WAN" 
+    }
+  ]
+}

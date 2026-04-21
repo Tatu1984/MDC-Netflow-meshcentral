@@ -1,0 +1,14 @@
+{
+  "data": {
+    "status": "stopped",
+    "exitstatus": "OK",
+    "pid": 880944,
+    "user": "root@pam",
+    "type": "qmdestroy",
+    "node": "pve",
+    "id": "102",
+    "upid": "UPID:pve:000D7130:01D86A96:6899DF1F:qmdestroy:102:root@pam:",
+    "pstart": 30960278,
+    "starttime": 1754914591
+  }
+}

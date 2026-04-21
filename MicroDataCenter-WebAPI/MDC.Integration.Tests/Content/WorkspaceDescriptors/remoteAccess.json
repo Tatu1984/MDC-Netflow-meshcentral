@@ -1,0 +1,6 @@
+{
+  "name": "IntegrationTest-Remote",
+  "virtualNetworks": [
+    { "enableRemoteNetwork": true }
+  ]
+}

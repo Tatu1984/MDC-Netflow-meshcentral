@@ -1,0 +1,8 @@
+name: UAT
+values:
+  - key: baseUrl
+    value: ''
+    enabled: true
+  - key: apiKey
+    value: ''
+    enabled: true

@@ -1,0 +1,14 @@
+{
+  "name": "IntegrationTest-MultiVNET",
+  "virtualNetworks": [
+    {
+      "name": "ITNetwork",
+      "gateway": {
+        "virtualNetworkGatewayWANNetworkType": "Egress"
+      }
+    },
+    {
+      "name": "OTNetwork"
+    }
+  ]
+}

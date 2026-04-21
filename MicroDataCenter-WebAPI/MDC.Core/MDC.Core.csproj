@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\Api\DeviceConfigurationService.cs" />
+    <Compile Remove="Services\Api\IDeviceConfigurationService.cs" />
+    <Compile Remove="Services\Providers\ZeroTier\ZTControllerNetwork.cs" />
+    <Compile Remove="Services\Providers\ZeroTier\ZTControllerNetworkMember.cs" />
+    <Compile Remove="Services\Providers\ZeroTier\ZTControllerStatus.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Graph" Version="5.102.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.82.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MDC.Shared\MDC.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Services\Api\DeviceConfigurationService.cs" />
+    <None Include="Services\Api\IDeviceConfigurationService.cs" />
+    <None Include="Services\Providers\ZeroTier\ZTControllerNetwork.cs" />
+    <None Include="Services\Providers\ZeroTier\ZTControllerNetworkMember.cs" />
+    <None Include="Services\Providers\ZeroTier\ZTControllerStatus.cs" />
+  </ItemGroup>
+
+</Project>

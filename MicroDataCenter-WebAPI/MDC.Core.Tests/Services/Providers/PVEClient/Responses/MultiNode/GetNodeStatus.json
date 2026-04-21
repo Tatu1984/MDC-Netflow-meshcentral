@@ -1,0 +1,54 @@
+{
+  "data": {
+    "memory": {
+      "used": 69456105472,
+      "total": 404353638400,
+      "free": 330664833024
+    },
+    "cpuinfo": {
+      "mhz": "3299.923",
+      "hvm": "1",
+      "sockets": 2,
+      "cores": 48,
+      "model": "Intel(R) Xeon(R) Gold 6252N CPU @ 2.30GHz",
+      "cpus": 96,
+      "user_hz": 100,
+      "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi pku ospke avx512_vnni md_clear flush_l1d arch_capabilities"
+    },
+    "pveversion": "pve-manager/8.4.5/57892e8e686cb35b",
+    "wait": 0.000140508641281439,
+    "kversion": "Linux 6.8.12-13-pve #1 SMP PREEMPT_DYNAMIC PMX 6.8.12-13 (2025-07-22T10:00Z)",
+    "cpu": 0.00569059997189827,
+    "rootfs": {
+      "total": 36403986432,
+      "free": 31698108416,
+      "avail": 29815914496,
+      "used": 4705878016
+    },
+    "uptime": 797853,
+    "boot-info": {
+      "secureboot": 0,
+      "mode": "efi"
+    },
+    "current-kernel": {
+      "machine": "x86_64",
+      "release": "6.8.12-13-pve",
+      "sysname": "Linux",
+      "version": "#1 SMP PREEMPT_DYNAMIC PMX 6.8.12-13 (2025-07-22T10:00Z)"
+    },
+    "swap": {
+      "free": 8589930496,
+      "total": 8589930496,
+      "used": 0
+    },
+    "ksm": {
+      "shared": 0
+    },
+    "idle": 0,
+    "loadavg": [
+      "0.52",
+      "0.43",
+      "0.43"
+    ]
+  }
+}

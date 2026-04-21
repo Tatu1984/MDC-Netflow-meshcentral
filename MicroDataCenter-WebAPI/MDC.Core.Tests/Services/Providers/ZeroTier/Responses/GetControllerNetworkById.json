@@ -1,0 +1,47 @@
+{
+  "authTokens": [ null ],
+  "authorizationEndpoint": "",
+  "capabilities": [],
+  "clientId": "",
+  "creationTime": 1753789350239,
+  "dns": [],
+  "enableBroadcast": true,
+  "id": "868d2ef0211a3090",
+  "ipAssignmentPools": [
+    {
+      "ipRangeEnd": "172.21.255.254",
+      "ipRangeStart": "172.21.0.1"
+    }
+  ],
+  "mtu": 2800,
+  "multicastLimit": 32,
+  "name": "0100V00",
+  "nwid": "868d2ef0211a3090",
+  "objtype": "network",
+  "private": true,
+  "remoteTraceLevel": 0,
+  "remoteTraceTarget": null,
+  "revision": 6,
+  "routes": [
+    {
+      "target": "172.21.0.0/16",
+      "via": null
+    }
+  ],
+  "rules": [
+    {
+      "not": false,
+      "or": false,
+      "type": "ACTION_ACCEPT"
+    }
+  ],
+  "rulesSource": "",
+  "ssoEnabled": false,
+  "tags": [],
+  "v4AssignMode": { "zt": true },
+  "v6AssignMode": {
+    "6plane": false,
+    "rfc4193": false,
+    "zt": false
+  }
+}

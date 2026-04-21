@@ -1,0 +1,152 @@
+{
+  "$schema": { "version": "1.2" },
+  "debian-version": "13.2",
+  "product": {
+    "fullname": "Proxmox VE",
+    "short": "pve",
+    "version": "9.1.1"
+  },
+  "iso": {
+    "release": "9.1",
+    "isorelease": "1"
+  },
+  "kernel-version": {
+    "sysname": "Linux",
+    "release": "6.17.2-1-pve",
+    "version": "#1 SMP PREEMPT_DYNAMIC PMX 6.17.2-1 (2025-10-21T11:55Z)",
+    "machine": "x86_64"
+  },
+  "boot-info": {
+    "mode": "efi",
+    "secureboot": true
+  },
+  "cpu-info": {
+    "cores": 4,
+    "cpus": 4,
+    "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat vnmi umip md_clear flush_l1d arch_capabilities",
+    "hvm": true,
+    "model": "Intel(R) Xeon(R) CPU D-1528 @ 1.90GHz",
+    "sockets": 1
+  },
+  "dmi": {
+    "system": {
+      "serial": "12345",
+      "uuid": "b787896e-57a6-4cb1-896c-4d525ad2827f",
+      "name": "Standard PC (i440FX \u002B PIIX, 1996)",
+      "sku": ""
+    },
+    "baseboard": {},
+    "chassis": {
+      "asset_tag": "",
+      "serial": ""
+    }
+  },
+  "filesystem": "ext4",
+  "fqdn": "pve.technest",
+  "machine-id": "8e26e287596242bb8c83dcb60750619d",
+  "disks": [
+    {
+      "size": 107374182400,
+      "is-bootdisk": true,
+      "udev-properties": {
+        "CURRENT_TAGS": ":systemd:",
+        "DEVLINKS": "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi0 /dev/disk/by-diskseq/9 /dev/disk/by-path/pci-0000:01:01.0-scsi-0:0:0:0",
+        "DEVNAME": "/dev/sda",
+        "DEVPATH": "/devices/pci0000:00/0000:00:05.0/0000:01:01.0/virtio3/host0/target0:0:0/0:0:0:0/block/sda",
+        "DEVTYPE": "disk",
+        "DISKSEQ": "9",
+        "ID_BUS": "scsi",
+        "ID_MODEL": "QEMU_HARDDISK",
+        "ID_MODEL_ENC": "QEMU\\x20HARDDISK\\x20\\x20\\x20",
+        "ID_PATH": "pci-0000:01:01.0-scsi-0:0:0:0",
+        "ID_PATH_TAG": "pci-0000_01_01_0-scsi-0_0_0_0",
+        "ID_REVISION": "2.5\u002B",
+        "ID_SCSI": "1",
+        "ID_SERIAL": "0QEMU_QEMU_HARDDISK_drive-scsi0",
+        "ID_SERIAL_SHORT": "drive-scsi0",
+        "ID_TYPE": "disk",
+        "ID_VENDOR": "QEMU",
+        "ID_VENDOR_ENC": "QEMU\\x20\\x20\\x20\\x20",
+        "MAJOR": "8",
+        "MINOR": "0",
+        "SUBSYSTEM": "block",
+        "TAGS": ":systemd:",
+        "USEC_INITIALIZED": "3918826"
+      }
+    }
+  ],
+  "network-interfaces": [
+    {
+      "name": "nic0",
+      "mac": "bc:24:11:eb:11:7c",
+      "address": "10.10.72.195/24",
+      "is-management": true,
+      "is-pinned": true,
+      "udev-properties": {
+        "CURRENT_TAGS": ":systemd:",
+        "DEVPATH": "/devices/pci0000:00/0000:00:12.0/virtio1/net/ens18",
+        "ID_BUS": "pci",
+        "ID_MODEL_FROM_DATABASE": "Virtio network device",
+        "ID_MODEL_ID": "0x1000",
+        "ID_NET_DRIVER": "virtio_net",
+        "ID_NET_LINK_FILE": "/usr/lib/systemd/network/99-default.link",
+        "ID_NET_NAME": "ens18",
+        "ID_NET_NAME_MAC": "enxbc2411eb117c",
+        "ID_NET_NAME_PATH": "enp0s18",
+        "ID_NET_NAME_SLOT": "ens18",
+        "ID_NET_NAMING_SCHEME": "v257",
+        "ID_OUI_FROM_DATABASE": "Proxmox Server Solutions GmbH",
+        "ID_PATH": "pci-0000:00:12.0",
+        "ID_PATH_TAG": "pci-0000_00_12_0",
+        "ID_PCI_CLASS_FROM_DATABASE": "Network controller",
+        "ID_PCI_SUBCLASS_FROM_DATABASE": "Ethernet controller",
+        "ID_VENDOR_FROM_DATABASE": "Red Hat, Inc.",
+        "ID_VENDOR_ID": "0x1af4",
+        "IFINDEX": "2",
+        "INTERFACE": "ens18",
+        "SUBSYSTEM": "net",
+        "SYSTEMD_ALIAS": "/sys/subsystem/net/devices/ens18",
+        "TAGS": ":systemd:",
+        "USEC_INITIALIZED": "3919788"
+      }
+    },
+    {
+      "name": "nic1",
+      "mac": "bc:24:11:f4:85:0f",
+      "is-pinned": true,
+      "udev-properties": {
+        "CURRENT_TAGS": ":systemd:",
+        "DEVPATH": "/devices/pci0000:00/0000:00:13.0/virtio2/net/ens19",
+        "ID_BUS": "pci",
+        "ID_MODEL_FROM_DATABASE": "Virtio network device",
+        "ID_MODEL_ID": "0x1000",
+        "ID_NET_DRIVER": "virtio_net",
+        "ID_NET_LINK_FILE": "/usr/lib/systemd/network/99-default.link",
+        "ID_NET_NAME": "ens19",
+        "ID_NET_NAME_MAC": "enxbc2411f4850f",
+        "ID_NET_NAME_PATH": "enp0s19",
+        "ID_NET_NAME_SLOT": "ens19",
+        "ID_NET_NAMING_SCHEME": "v257",
+        "ID_OUI_FROM_DATABASE": "Proxmox Server Solutions GmbH",
+        "ID_PATH": "pci-0000:00:13.0",
+        "ID_PATH_TAG": "pci-0000_00_13_0",
+        "ID_PCI_CLASS_FROM_DATABASE": "Network controller",
+        "ID_PCI_SUBCLASS_FROM_DATABASE": "Ethernet controller",
+        "ID_VENDOR_FROM_DATABASE": "Red Hat, Inc.",
+        "ID_VENDOR_ID": "0x1af4",
+        "IFINDEX": "3",
+        "INTERFACE": "ens19",
+        "SUBSYSTEM": "net",
+        "SYSTEMD_ALIAS": "/sys/subsystem/net/devices/ens19",
+        "TAGS": ":systemd:",
+        "USEC_INITIALIZED": "3920653"
+      }
+    }
+  ],
+  "ssh-public-host-keys": {
+    "ecdsa": "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOebzFa723Knf8sqWzZQwysMCzRjIiD7qrAAenzqSD/B1raEAkuw\u002BoihGiq0p0DesHS1vWVqWe9Rhw8XmYc5c1Q= root@pve",
+    "ed25519": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILLZ7TnT3kgZmb27OolQFKOfkzCDhrtivuluNkDHprDd root@pve",
+    "rsa": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOLNtSkcSIZDVN4o\u002BxKP\u002B\u002BfZ\u002BdoWb//uImGPruB\u002BFjXy9SqsaonMjucGxV5tNiLCZBsH/haPnCNQuZ/CzoZU6pCBoqIpYl1yrPe\u002Bfi0xWN\u002Bczz8WHFt5O\u002B//04SQSaf0sJHGEmxM3gdzqMuPnUN2VvlyTM/6/m5AZodEGIEgG3aNmuPRtd8BXK4zHV5RmCG85KY1ODFuZUxhDSoWhokwSst9mPRT9iiUNSP8pxu/4NT6yUcEV8EFC9nfK3fle/8xs6VbXHa4MlbCVq5SKKGAj7iKQ9Ff2E4aZmJ9CkAJyMr3czCnedxuKOAXbpP6chTLJBZ8egej3knFSwKHAfDgL8IHbQKMQfQ4atHlYbaO\u002BvXWbvyMggAQLpqn/KaabPrXo3YgDQkKTpPmLn5lII49LogdQQV749EIWflBPGdpjkPocpcMBYZt2ibUHxNxJ6/mH7yLjm3iLsHagbZ\u002B1N5y3hjqEiNpnGcqFHs4NmQ3Xuywr44wouQx9Ea0SYqYOMlmc= root@pve"
+  },
+  "reboot-mode": "reboot"
+}

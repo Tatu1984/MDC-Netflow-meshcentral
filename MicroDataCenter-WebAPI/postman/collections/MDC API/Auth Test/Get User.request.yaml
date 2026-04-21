@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get User
+method: GET
+url: '{{baseUrl}}/api/AuthTest/user'
+order: 6000

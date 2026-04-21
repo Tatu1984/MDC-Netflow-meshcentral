@@ -1,0 +1,20 @@
+$kind: http-request
+name: Create Workspace
+url: "{{baseUrl}}/odata/Workspaces"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"siteId\": \"019d3559-db96-7270-a4dd-a6de85d10748\",\r
+
+    \    \"organizationId\": \"019cd3e8-603b-7946-8509-322eea6016fd\",\r
+
+    \    \"descriptor\": {\r
+
+    \        \"name\": \"simpletest\"\r
+
+    \    }\r
+
+    }"
+order: 5000

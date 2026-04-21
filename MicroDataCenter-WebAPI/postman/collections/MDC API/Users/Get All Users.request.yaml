@@ -1,0 +1,10 @@
+$kind: http-request
+name: Get All Users
+url: "{{baseUrl}}/odata/Users"
+method: GET
+auth:
+  type: apikey
+  credentials:
+    key: X-API-KEY
+    value: test-admin-key-12345
+order: 1774871085577
