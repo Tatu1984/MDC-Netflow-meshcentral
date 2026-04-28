@@ -40,10 +40,10 @@ export default async function VmDetailPage({ params, searchParams }: Props) {
       <div className="flex items-baseline justify-between">
         <div>
           <h1 className="text-2xl font-semibold">VM {vmid}</h1>
-          <p className="text-sm text-muted-foreground">
-            MeshCentral agent: {agentBadge}
-            {asKey ? <> · acting as <Badge variant="secondary">{asKey}</Badge></> : null}
-          </p>
+          <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-x-1 gap-y-1">
+            <span>MeshCentral agent:</span> {agentBadge}
+            {asKey ? <><span>· acting as</span> <Badge variant="secondary">{asKey}</Badge></> : null}
+          </div>
         </div>
       </div>
 

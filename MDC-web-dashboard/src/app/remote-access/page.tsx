@@ -64,11 +64,11 @@ export default async function RemoteAccessPage({ searchParams }: Props) {
     <div className="p-6 space-y-6" data-testid="remote-access-page">
       <div>
         <h1 className="text-2xl font-semibold">Remote access</h1>
-        <p className="text-sm text-muted-foreground">
-          Tier: <Badge variant="outline">{tier}</Badge>
-          {asKey ? <> · acting as <Badge variant="secondary">{asKey}</Badge></> : null}
-          {myWs.length > 0 ? <> · workspaces: <span className="font-mono">{myWs.join(", ")}</span></> : null}
-        </p>
+        <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-x-1 gap-y-1">
+          <span>Tier:</span> <Badge variant="outline">{tier}</Badge>
+          {asKey ? <><span>· acting as</span> <Badge variant="secondary">{asKey}</Badge></> : null}
+          {myWs.length > 0 ? <><span>· workspaces:</span> <span className="font-mono">{myWs.join(", ")}</span></> : null}
+        </div>
       </div>
 
       {err && (

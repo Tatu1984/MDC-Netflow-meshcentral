@@ -74,11 +74,11 @@ export default async function WorkspaceObservabilityPage({ params, searchParams 
       <div className="flex items-baseline justify-between">
         <div>
           <h1 className="text-2xl font-semibold">Workspace observability</h1>
-          <p className="text-sm text-muted-foreground">
-            Workspace <code>{wsId}</code>
-            {asKey ? <> · acting as <Badge variant="secondary">{asKey}</Badge></> : null}
-            {tier !== "unknown" ? <> · tier <Badge variant="outline">{tier}</Badge></> : null}
-          </p>
+          <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-x-1 gap-y-1">
+            <span>Workspace</span> <code>{wsId}</code>
+            {asKey ? <><span>· acting as</span> <Badge variant="secondary">{asKey}</Badge></> : null}
+            {tier !== "unknown" ? <><span>· tier</span> <Badge variant="outline">{tier}</Badge></> : null}
+          </div>
         </div>
         <div className="text-xs text-muted-foreground">
           {myWorkspaces.length > 0 && (
@@ -113,9 +113,9 @@ export default async function WorkspaceObservabilityPage({ params, searchParams 
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">
-              Tier: <Badge variant="outline">{tier}</Badge>
-            </p>
+            <div className="text-sm text-muted-foreground flex items-center gap-1">
+              <span>Tier:</span> <Badge variant="outline">{tier}</Badge>
+            </div>
             <pre className="text-xs whitespace-pre-wrap mt-2">{error.message}</pre>
           </CardContent>
         </Card>

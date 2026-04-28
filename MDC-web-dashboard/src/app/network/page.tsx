@@ -62,11 +62,11 @@ export default async function NetworkPage({ searchParams }: Props) {
       <div className="flex items-baseline justify-between">
         <div>
           <h1 className="text-2xl font-semibold">Network (NetFlow)</h1>
-          <p className="text-sm text-muted-foreground">
-            Tier: <Badge variant="outline">{tier}</Badge>
-            {asKey ? <> · acting as <Badge variant="secondary">{asKey}</Badge></> : null}
-            {selectedWs ? <> · workspace <Badge variant="default">{selectedWs}</Badge></> : null}
-          </p>
+          <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-x-1 gap-y-1">
+            <span>Tier:</span> <Badge variant="outline">{tier}</Badge>
+            {asKey ? <><span>· acting as</span> <Badge variant="secondary">{asKey}</Badge></> : null}
+            {selectedWs ? <><span>· workspace</span> <Badge variant="default">{selectedWs}</Badge></> : null}
+          </div>
         </div>
         {myWsList.length > 1 && (
           <div className="flex gap-2 text-xs" data-testid="ws-switcher">
